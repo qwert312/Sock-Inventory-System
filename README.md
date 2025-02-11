@@ -19,7 +19,7 @@
 
 1. Скачать и распаковать архив SockInventorySystem из [релизов](https://github.com/qwert312/Sock-Inventory-System/releases/latest).
 2. Поменять под свою базу данных application.properties.
-3. Запустить НАЗВАНИЕ.jar
+3. Запустить jar.
 
 Перед первым запуском нужно убрать # в строке #spring.jpa.hibernate.ddl-auto=create в application.properties. После
 первого запуска необходимо её вернуть, чтобы структура базы данных не создавалась каждый раз заново.
