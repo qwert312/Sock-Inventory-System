@@ -1,6 +1,7 @@
 package com.daniil.sockinventorysystem.controllers.controlleradvices;
 
 import com.daniil.sockinventorysystem.exceptions.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageConversionException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
@@ -21,7 +22,7 @@ public class ExceptionControllerAdvice {
 
     @ExceptionHandler(HttpMessageConversionException.class)
     public ResponseEntity<String> HttpMessageNotReadableExceptionHandler(HttpMessageNotReadableException ex) {
-        return ResponseEntity.badRequest().body("The request body cannot be deserialized to required type.");
+        return ResponseEntity.badRequest().body("The request body cannot be deserialized.");
     }
 
     @ExceptionHandler(MultipartException.class)
